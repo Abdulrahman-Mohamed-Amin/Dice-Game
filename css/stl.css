@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.4s;
+  font-family: "Roboto", sans-serif;
+}
+body > div{
+  height: 100vh;
+}
+
+/* dice simulator */
+
+.dice_simulator{
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.dice_simulator h1{
+  margin: 20px ;
+  text-align: center;
+}
+.dice_simulator .cont{
+  /* background: #000; */
+  width: 400px;
+  margin: 50px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.cont .dice{
+  font-size: 100px;
+  color: rgb(48, 26, 26);
+  width: fit-content;
+}
+.cont .dice.roll{
+  animation: roll 1s linear;
+}
+@keyframes roll {
+  0%
+  {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100%
+  {
+    transform: rotateX(720deg) rotateY(720deg);
+
+  }
+}
+.dice_simulator .cont button{
+  background: #516DFF;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  font-size: 17px;
+  border-radius: 6px;
+  cursor: pointer;
+} 
+.dice_simulator .result {
+  width: 100%;
+  padding: 5px;
+}
+.result .res{
+  background: #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+.result .res p{
+  font-weight: bold;
+  font-size: 20px;
+}
+.small_dice{
+  font-size: 50px;
+}
